@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Díade Odontologia | Odontologia Particular na Vila Leopoldina, São Paulo</title>
+  <meta name="description" content="Díade Odontologia — clínica odontológica particular na Vila Leopoldina, São Paulo/SP. Atendimento humanizado, planejamento individualizado e cuidado personalizado. Agende pelo WhatsApp.">
+  <link rel="canonical" href="https://diadeodontologia.com.br/">
+  <meta property="og:title" content="Díade Odontologia | Odontologia Particular na Vila Leopoldina">
+  <meta property="og:description" content="Atendimento odontológico particular, com cuidado individualizado, em São Paulo/SP.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8fbfb;
+      --bg-soft: #e5f6f7;
+      --bg-dark: #0e2b2e;
+      --text: #24403f;
+      --text-strong: #0e2b2e;
+      --text-muted: #4c6664;
+      --accent: #2dc5d2;
+      --accent-dark: #0e8c97;
+      --line: rgba(14, 43, 46, 0.15);
+      --line-dark: rgba(255, 255, 255, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(7, 22, 24, 0.28);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .popup-overlay.show {
+      display: flex;
+    }
+
+    .popup-notice {
+      width: min(360px, calc(100vw - 32px));
+      background: var(--bg-dark);
+      color: #f4fbfa;
+      border-radius: 6px;
+      padding: 22px 24px;
+      box-shadow: 0 22px 48px rgba(6, 24, 26, 0.4);
+      border-top: 2px solid var(--accent);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .popup-icon {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      border: 1px solid rgba(63, 201, 213, 0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .popup-title {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: #3fc9d5;
+    }
+
+    .popup-copy {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #c9e4e4;
+      margin: 0;
+    }
+
+    .popup-close {
+      background: none;
+      border: 0;
+      color: #6e938f;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1;
+      padding: 2px;
+      flex-shrink: 0;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-pad {
+      padding: 100px 64px;
+    }
+
+    .hero-pad {
+      padding: 52px 64px 88px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow span:first-child {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .eyebrow-line {
+      height: 1px;
+      flex: 1;
+    }
+
+    .eyebrow-light span:first-child { color: var(--accent-dark); }
+    .eyebrow-light .eyebrow-line { background: var(--line); }
+    .eyebrow-dark span:first-child { color: #3fc9d5; }
+    .eyebrow-dark .eyebrow-line { background: var(--line-dark); }
+
+    .h1,
+    .h2 {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.12;
+      margin: 0;
+      color: var(--text-strong);
+    }
+
+    .h1 {
+      font-size: 54px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .h2 {
+      font-size: 34px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 46%;
+      height: 100%;
+      background: var(--bg-soft);
+      clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-copy p {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 0 16px;
+    }
+
+    .hero-meta {
+      font-family: "Manrope", sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 34px;
+    }
+
+    .logo {
+      height: 72px;
+      width: auto;
+      margin-bottom: 30px;
+    }
+
+    .accent-bar {
+      width: 44px;
+      height: 2px;
+      background: var(--accent);
+      margin-bottom: 22px;
+    }
+
+    .hero-frame {
+      position: relative;
+    }
+
+    .hero-frame::before {
+      content: "";
+      position: absolute;
+      inset: -22px 22px 22px -22px;
+      border: 1px solid var(--accent);
+      z-index: 0;
+    }
+
+    .hero-frame img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      box-shadow: 0 30px 60px rgba(14, 43, 46, 0.18);
+    }
+
+    .button-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: #fff;
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px 28px;
+      border-radius: 4px;
+      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.28);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .about-copy p,
+    .section-copy {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin: 0;
+      max-width: 640px;
+    }
+
+    .dark-section {
+      background: var(--bg-dark);
+      color: #fff;
+    }
+
+    .dark-section .h2 { color: #fff; }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .diff-item {
+      padding: 30px 40px 30px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      gap: 24px;
+      align-items: baseline;
+    }
+
+    .diff-item-num {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #3fc9d5;
+      flex-shrink: 0;
+    }
+
+    .diff-item-title {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 19px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .diff-item-desc {
+      font-size: 16px;
+      color: #9fbab7;
+    }
+
+    .treat-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .treat-grid p {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin: 0;
+      max-width: 560px;
+    }
+
+    .treat-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .treat-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-family: "Manrope", sans-serif;
+      font-size: 19px;
+      color: var(--text-strong);
+    }
+
+    .treat-icon {
+      width: 26px;
+      height: 26px;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .services-section {
+      background: var(--bg-soft);
+    }
+
+    .services-head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 64px;
+    }
+
+    .services-head p {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .pillar-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .pillar-item {
+      padding: 28px 24px 0 0;
+    }
+
+    .pillar-num {
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: var(--accent);
+      margin-bottom: 36px;
+    }
+
+    .pillar-title {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text-strong);
+      margin-bottom: 10px;
+    }
+
+    .pillar-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+
+    .team-grid img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .test-carousel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .test-track {
+      display: flex;
+      gap: 24px;
+      will-change: transform;
+      transition: transform 0.55s ease;
+    }
+
+    .test-item {
+      flex: 0 0 calc((100% - 48px) / 3);
+      min-width: 0;
+      border-top: 2px solid var(--accent);
+      background: linear-gradient(180deg, #f8fbfb 0%, #e5f6f7 100%);
+      padding: 28px 24px;
+      box-shadow: 0 16px 36px rgba(14, 43, 46, 0.08);
+    }
+
+    .test-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .test-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #0e8c97;
+      color: #fff;
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .test-name {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text-strong);
+      line-height: 1.25;
+    }
+
+    .test-stars {
+      display: flex;
+      gap: 4px;
+      color: #ffb800;
+      margin-bottom: 16px;
+    }
+
+    .test-copy {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .loc-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .loc-copy p {
+      font-size: 17px;
+      color: #c7dedc;
+      margin: 0 0 6px;
+    }
+
+    .map-frame {
+      position: relative;
+    }
+
+    .map-frame::before {
+      content: "";
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--accent);
+      z-index: 0;
+    }
+
+    .map-shell {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      height: 380px;
+    }
+
+    .map-shell iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      filter: grayscale(0.15);
+    }
+
+    .outline-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      font-family: "Manrope", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 22px;
+      border-radius: 4px;
+    }
+
+    .faq-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .faq-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .faq-item {
+      border-top: 1px solid rgba(14, 43, 46, 0.14);
+      padding: 26px 0;
+    }
+
+    .faq-button {
+      width: 100%;
+      background: none;
+      border: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      cursor: pointer;
+      text-align: left;
+      padding: 0;
+      color: inherit;
+    }
+
+    .faq-question {
+      font-family: "Manrope", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--text-strong);
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      position: relative;
+      width: 18px;
+      height: 18px;
+    }
+
+    .faq-icon::before,
+    .faq-icon::after {
+      content: "";
+      position: absolute;
+      background: var(--accent-dark);
+    }
+
+    .faq-icon::before {
+      top: 50%;
+      left: 0;
+      width: 18px;
+      height: 1.5px;
+      transform: translateY(-50%);
+    }
+
+    .faq-icon::after {
+      top: 0;
+      left: 50%;
+      width: 1.5px;
+      height: 18px;
+      transform: translateX(-50%);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .faq-item.open .faq-icon::after {
+      opacity: 0;
+    }
+
+    .faq-answer {
+      display: none;
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-top: 16px;
+      max-width: 660px;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .cta {
+      padding: 110px 64px;
+      background-color: #0e2b2e;
+      background-image:
+        linear-gradient(120deg, rgba(14, 43, 46, 0.84) 0%, rgba(18, 54, 56, 0.78) 55%, rgba(14, 43, 46, 0.88) 100%),
+        url("assets/call.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 560px;
+      height: 560px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(45, 197, 210, 0.16) 0%, rgba(45, 197, 210, 0) 70%);
+      pointer-events: none;
+    }
+
+    .cta-secondary {
+      background-image:
+        linear-gradient(120deg, rgba(14, 43, 46, 0.84) 0%, rgba(18, 54, 56, 0.78) 55%, rgba(14, 43, 46, 0.88) 100%),
+        url("assets/call2.webp");
+    }
+
+    .cta-inner {
+      position: relative;
+      max-width: 660px;
+      margin: 0 auto;
+    }
+
+    .cta-line {
+      width: 44px;
+      height: 2px;
+      background: var(--accent);
+      margin: 0 auto 28px;
+    }
+
+    .cta .h2 {
+      color: #fff;
+      margin-bottom: 32px;
+    }
+
+    .footer {
+      padding: 60px 64px 40px;
+      background: #0a2224;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-logo {
+      height: 46px;
+      width: auto;
+      margin-bottom: 18px;
+      filter: none;
+      opacity: 1;
+    }
+
+    .footer p,
+    .footer div {
+      font-size: 16px;
+    }
+
+    .footer-copy {
+      color: #6e938f;
+      max-width: 320px;
+      margin: 0;
+    }
+
+    .footer-title {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #3fc9d5;
+      margin-bottom: 16px;
+    }
+
+    .footer-meta {
+      color: #a9c6c3;
+      margin-bottom: 8px;
+    }
+
+    .footer-address {
+      color: #a9c6c3;
+      line-height: 1.6;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 44px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 14px;
+      color: #4e6b68;
+    }
+
+    @media (max-width: 900px) {
+      .section-pad,
+      .hero-pad,
+      .cta,
+      .footer {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .section-pad { padding-top: 64px; padding-bottom: 64px; }
+      .hero-pad { padding-top: 36px; padding-bottom: 48px; }
+
+      .hero::after,
+      .eyebrow-line {
+        display: none;
+      }
+
+      .popup-overlay { padding: 16px; }
+      .popup-notice { width: 100%; }
+
+      .hero-grid,
+      .about-grid,
+      .treat-grid,
+      .services-head,
+      .loc-grid,
+      .footer-grid,
+      .diff-grid,
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pillar-row {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 36px;
+      }
+
+      .footer-grid,
+      .footer-copy,
+      .footer-bottom,
+      .footer-title,
+      .footer-meta,
+      .footer-address {
+        text-align: center;
+      }
+
+      .footer-grid > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .h1 { font-size: 38px; }
+      .h2 { font-size: 27px; }
+
+      .logo {
+        height: 58px;
+      }
+
+      .hero-frame img {
+        height: 380px;
+      }
+
+      .cta {
+        background-attachment: scroll;
+      }
+
+      .test-item {
+        flex: 0 0 100%;
+        padding: 24px 18px;
+      }
+
+      .test-name {
+        font-size: 16px;
+      }
+
+      .test-copy {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-section .eyebrow,
+      .services-head {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .services-head {
+        margin-bottom: 52px;
+      }
+
+      .services-head .h2 {
+        font-size: 34px;
+      }
+
+      .services-head p {
+        font-size: 18px;
+        line-height: 1.7;
+        max-width: 340px;
+        margin: 0 auto;
+      }
+
+      .pillar-row {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+      }
+
+      .pillar-item {
+        padding: 10px 0 0;
+        text-align: center;
+      }
+
+      .pillar-num {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+
+      .pillar-title {
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
+
+      .pillar-desc {
+        font-size: 17px;
+        line-height: 1.65;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+
+      .hero-frame img,
+      .team-grid img {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-overlay show" id="popup-overlay">
+    <div class="popup-notice" id="popup-notice" role="dialog" aria-modal="true" aria-live="polite" aria-label="Aviso sobre atendimento">
+      <div class="popup-icon" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L3 6V11C3 16.5 6.8 21.4 12 22.8C17.2 21.4 21 16.5 21 11V6L12 2Z" stroke="#3FC9D5" stroke-width="1.8" stroke-linejoin="round"></path>
+          <path d="M9 12L11 14L15.5 9.5" stroke="#3FC9D5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+      <div style="flex: 1;">
+        <div class="popup-title">Atendimento particular</div>
+        <p class="popup-copy">A Díade Odontologia não atende convênios.<br>O atendimento é exclusivamente particular.</p>
+      </div>
+      <button class="popup-close" id="popup-close" type="button" aria-label="Fechar aviso">×</button>
+    </div>
+  </div>
+
+  <section class="hero hero-pad">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <img class="logo" src="assets/diade-logo.jpg" alt="Díade Odontologia">
+        <div class="accent-bar"></div>
+        <h1 class="h1">Transforme seu sorriso com cuidado, tecnologia e naturalidade</h1>
+        <p>Conheça a Díade Odontologia, uma clínica em São Paulo voltada para quem busca cuidado, confiança e planejamento individualizado para a saúde do sorriso.</p>
+        <div class="hero-meta">Vila Leopoldina · São Paulo/SP</div>
+        <a class="button-wa" href="https://wa.me/5511983508410?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20D%C3%ADade%20Odontologia." target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.3 16.9L2 22l5.2-1.4a8.9 8.9 0 0 0 4.3 1.1h0a8.9 8.9 0 0 0 6.1-15.4ZM11.5 20a7.4 7.4 0 0 1-3.8-1l-.3-.2-3.1.8.8-3-.2-.3a7.4 7.4 0 1 1 13.7-3.9A7.4 7.4 0 0 1 11.5 20Zm4-5.5c-.2-.1-1.3-.6-1.5-.7-.2-.1-.4-.1-.5.1-.1.2-.6.7-.7.9-.1.1-.3.1-.5 0-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.1 0-.3 0-.4 0-.1-.5-1.2-.7-1.6-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.1 1.6 2.5 4 3.5.5.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1Z"></path></svg>
+          Agendar atendimento
+        </a>
+      </div>
+      <div class="hero-frame">
+        <img src="assets/hero.webp" alt="Clínica Díade Odontologia">
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container about-grid">
+      <div class="eyebrow eyebrow-light" style="margin-bottom: 0;">
+        <span>01 — Quem é a Díade</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <div class="about-copy">
+        <h2 class="h2" style="font-size: 36px; max-width: 640px; margin-bottom: 26px;">Cuidado individualizado, do primeiro contato ao acompanhamento</h2>
+        <p>A Díade Odontologia oferece atendimento odontológico particular na Vila Leopoldina, com foco em cuidado personalizado, escuta atenta e planejamento adequado para cada paciente. A clínica une estrutura, proximidade e uma jornada de atendimento pensada para quem valoriza qualidade e confiança.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad dark-section">
+    <div class="container">
+      <div class="eyebrow eyebrow-dark" style="margin-bottom: 60px;">
+        <span>02 — Diferenciais</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="h2" style="margin-bottom: 56px; max-width: 620px;">Diferenciais que fazem sentido para você</h2>
+      <div class="diff-grid">
+        <div class="diff-item">
+          <span class="diff-item-num">01</span>
+          <div>
+            <div class="diff-item-title">Atendimento particular e personalizado</div>
+            <div class="diff-item-desc">Consultas dedicadas, sem pressa e sem rotinas padronizadas.</div>
+          </div>
+        </div>
+        <div class="diff-item">
+          <span class="diff-item-num">02</span>
+          <div>
+            <div class="diff-item-title">Localização estratégica na Vila Leopoldina</div>
+            <div class="diff-item-desc">Fácil acesso para quem está na região oeste de São Paulo.</div>
+          </div>
+        </div>
+        <div class="diff-item">
+          <span class="diff-item-num">03</span>
+          <div>
+            <div class="diff-item-title">Comunicação clara durante o atendimento</div>
+            <div class="diff-item-desc">Você entende cada etapa do seu diagnóstico e tratamento.</div>
+          </div>
+        </div>
+        <div class="diff-item">
+          <span class="diff-item-num">04</span>
+          <div>
+            <div class="diff-item-title">Jornada pensada para cuidado e confiança</div>
+            <div class="diff-item-desc">Cada visita é conduzida com atenção e escuta genuína.</div>
+          </div>
+        </div>
+        <div class="diff-item">
+          <span class="diff-item-num">05</span>
+          <div>
+            <div class="diff-item-title">Estrutura profissional para o atendimento</div>
+            <div class="diff-item-desc">Ambiente preparado para oferecer segurança e conforto.</div>
+          </div>
+        </div>
+        <div class="diff-item">
+          <span class="diff-item-num">06</span>
+          <div>
+            <div class="diff-item-title">Foco em pacientes que valorizam qualidade</div>
+            <div class="diff-item-desc">Sem posicionamento popular, promocional ou de preço.</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 40px; text-align: center;">
+        <a class="button-wa" href="https://wa.me/5511983508410?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20D%C3%ADade%20Odontologia." target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.3 16.9L2 22l5.2-1.4a8.9 8.9 0 0 0 4.3 1.1h0a8.9 8.9 0 0 0 6.1-15.4ZM11.5 20a7.4 7.4 0 0 1-3.8-1l-.3-.2-3.1.8.8-3-.2-.3a7.4 7.4 0 1 1 13.7-3.9A7.4 7.4 0 0 1 11.5 20Z"></path></svg>
+          Agendar atendimento
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="eyebrow eyebrow-light">
+        <span>03 — Tratamentos</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <div class="treat-grid">
+        <div>
+          <h2 class="h2" style="margin-bottom: 28px; max-width: 620px;">Tratamentos para cada etapa do seu cuidado</h2>
+          <p>A Díade Odontologia oferece uma gama completa de serviços odontológicos, sempre com foco na qualidade e no cuidado individualizado para cada paciente.</p>
+        </div>
+        <div class="treat-list">
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Avaliação e Diagnóstico</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Limpeza e Profilaxia</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Odontopediatria</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Ortodontia</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Endodontia</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Clareamento Dental</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Restaurações e Estética</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Implantes Dentários</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta cta-secondary">
+    <div class="cta-inner">
+      <div class="cta-line"></div>
+      <h2 class="h2">Seu novo sorriso começa com uma experiência acolhedora e personalizada</h2>
+      <a class="button-wa" href="https://wa.me/5511983508410?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20D%C3%ADade%20Odontologia." target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.3 16.9L2 22l5.2-1.4a8.9 8.9 0 0 0 4.3 1.1h0a8.9 8.9 0 0 0 6.1-15.4ZM11.5 20a7.4 7.4 0 0 1-3.8-1l-.3-.2-3.1.8.8-3-.2-.3a7.4 7.4 0 1 1 13.7-3.9A7.4 7.4 0 0 1 11.5 20Z"></path></svg>
+        Agendar atendimento
+      </a>
+    </div>
+  </section>
+
+  <section class="section-pad services-section">
+    <div class="container">
+      <div class="eyebrow eyebrow-light">
+        <span>04 — Atendimento completo</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <div class="services-head">
+        <h2 class="h2">Uma jornada pensada em cada etapa do seu cuidado</h2>
+        <p>A Díade acompanha o paciente do diagnóstico ao acompanhamento contínuo, com planejamento individualizado para cada caso.</p>
+      </div>
+      <div class="pillar-row">
+        <div class="pillar-item">
+          <div class="pillar-num">01</div>
+          <div class="pillar-title">Diagnóstico</div>
+          <div class="pillar-desc">Avaliação cuidadosa da sua saúde bucal.</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-num">02</div>
+          <div class="pillar-title">Prevenção</div>
+          <div class="pillar-desc">Acompanhamento contínuo da sua saúde bucal.</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-num">03</div>
+          <div class="pillar-title">Tratamento</div>
+          <div class="pillar-desc">Planejamento individual conforme sua necessidade.</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-num">04</div>
+          <div class="pillar-title">Acompanhamento</div>
+          <div class="pillar-desc">Retornos e orientação em cada etapa da jornada.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="eyebrow eyebrow-light">
+        <span>05 — Confiança</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="h2" style="margin-bottom: 56px; max-width: 620px;">Uma equipe dedicada ao seu cuidado</h2>
+      <div class="team-grid">
+        <img src="assets/clinica1.webp" alt="Ambiente da clínica Díade Odontologia">
+        <img src="assets/clinica2.webp" alt="Estrutura da clínica Díade Odontologia">
+      </div>
+      <div class="test-carousel" aria-label="Depoimentos de pacientes">
+        <div class="test-track">
+          <article class="test-item">
+            <div class="test-head">
+              <div class="test-avatar">DC</div>
+              <div class="test-name">Dayana Cristina</div>
+            </div>
+            <div class="test-stars" aria-label="5 estrelas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="test-copy">Eu e minha família preferimos a Díade para nosso cuidado com a saúde bucal e cuidados dentários. A Dr Daniela e sua cordialidade, paciência e carinho com os pacientes nos faz querer voltar sempre, fora que a estrutura e o atendimento desde a recepção e fora da curva, só tenho elogios para esse espaço que sempre foi o melhor consultório visitado pela minha família.</p>
+          </article>
+          <article class="test-item">
+            <div class="test-head">
+              <div class="test-avatar">CG</div>
+              <div class="test-name">Chris Seiko Gomes</div>
+            </div>
+            <div class="test-stars" aria-label="5 estrelas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="test-copy">Super recomendo a Diade Dermatologia! Atendimento humanizado, com toda a excelente, carinho e atenção comigo e a minha família!</p>
+          </article>
+          <article class="test-item">
+            <div class="test-head">
+              <div class="test-avatar">LP</div>
+              <div class="test-name">Luiz Felipe Hammes Pinton</div>
+            </div>
+            <div class="test-stars" aria-label="5 estrelas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="test-copy">Atendimento excelente. Muito tato com criança, paciência e carinho. Meu filho que não tinha deixado nem olhar em outro lugar, fez até profilaxia. Excelente atendimento das dras Kimberly e dra Daniela. Além do excelente suporte e atendimento da Gabrieli na recepção e whatsapp.</p>
+          </article>
+          <article class="test-item">
+            <div class="test-head">
+              <div class="test-avatar">MC</div>
+              <div class="test-name">Mauro Calil</div>
+            </div>
+            <div class="test-stars" aria-label="5 estrelas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="test-copy">Gosto muito do consultório Diade, minha filha Júlia faz tratamento há 10 anos com a Dra Cecilia Diaféria e há 6 anos com Dra Angela Ruggiero Ortodontista, excelentes profissionais e super competentes nas consultas, atendem no horário agendado, ambiente super limpo.</p>
+          </article>
+          <article class="test-item">
+            <div class="test-head">
+              <div class="test-avatar">LS</div>
+              <div class="test-name">Lusiele Silvino</div>
+            </div>
+            <div class="test-stars" aria-label="5 estrelas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="test-copy">Meus parabéns à Clínica Diade Odontologia e à profissional Daniela Hilário pelo profissionalismo e dedicação. Excelente trabalho!</p>
+          </article>
+          <article class="test-item">
+            <div class="test-head">
+              <div class="test-avatar">CM</div>
+              <div class="test-name">Carlos Renato Galvão Morais</div>
+            </div>
+            <div class="test-stars" aria-label="5 estrelas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="test-copy">Toda a minha família é atendida com muita excelência!! Muito bem localizada, consultório sempre muito limpo e muito bem equipado. As crianças também são muito bem atendidas. Recomendo a todos!!!</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad dark-section">
+    <div class="container">
+      <div class="eyebrow eyebrow-dark" style="margin-bottom: 56px;">
+        <span>06 — Localização</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <div class="loc-grid">
+        <div class="loc-copy">
+          <h2 class="h2" style="font-size: 32px; color: #fff; margin-bottom: 22px;">Díade Odontologia</h2>
+          <p>Av. Dr. Gastão Vidigal, 1132, Conjunto 408</p>
+          <p>Vila Leopoldina, São Paulo/SP</p>
+          <p style="margin-bottom: 32px;">CEP 05314-000</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+            <a class="button-wa" href="https://wa.me/5511983508410?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20D%C3%ADade%20Odontologia." target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.3 16.9L2 22l5.2-1.4a8.9 8.9 0 0 0 4.3 1.1h0a8.9 8.9 0 0 0 6.1-15.4ZM11.5 20a7.4 7.4 0 0 1-3.8-1l-.3-.2-3.1.8.8-3-.2-.3a7.4 7.4 0 1 1 13.7-3.9A7.4 7.4 0 0 1 11.5 20Z"></path></svg>
+              Falar com a clínica
+            </a>
+            <a class="outline-button" href="https://www.google.com/maps/dir/?api=1&destination=Av.+Dr.+Gast%C3%A3o+Vidigal,+1132,+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver rota</a>
+          </div>
+        </div>
+        <div class="map-frame">
+          <div class="map-shell">
+            <iframe title="Mapa Díade Odontologia" loading="lazy" src="https://www.google.com/maps?q=Av.+Dr.+Gast%C3%A3o+Vidigal,+1132,+Vila+Leopoldina,+S%C3%A3o+Paulo+SP&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="faq-wrap">
+      <div class="eyebrow eyebrow-light">
+        <span>07 — Dúvidas</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="h2" style="font-size: 32px; margin-bottom: 44px;">Perguntas frequentes</h2>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-button" type="button">
+            <span class="faq-question">A Díade Odontologia atende pacientes particulares?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">Sim. O atendimento da Díade Odontologia é voltado exclusivamente para pacientes particulares.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-button" type="button">
+            <span class="faq-question">Onde a clínica está localizada?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">Estamos na Av. Dr. Gastão Vidigal, 1132, Conjunto 408 — Vila Leopoldina, São Paulo/SP.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-button" type="button">
+            <span class="faq-question">Como faço para agendar uma avaliação?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">Basta entrar em contato pelo WhatsApp e nossa equipe conduz o agendamento com você.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-button" type="button">
+            <span class="faq-question">A clínica atende convênios?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">Não. Nosso atendimento é 100% particular, o que garante atenção individualizada em cada etapa do seu tratamento.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-button" type="button">
+            <span class="faq-question">Quais tratamentos odontológicos são realizados?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">Oferecemos atendimento odontológico completo, com planejamento individualizado para cada paciente.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-button" type="button">
+            <span class="faq-question">O atendimento é feito com hora marcada?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">Sim. Os atendimentos são realizados mediante agendamento prévio.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-button" type="button">
+            <span class="faq-question">Posso tirar dúvidas pelo WhatsApp antes de agendar?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">Sim, nossa equipe está disponível pelo WhatsApp para esclarecer suas dúvidas antes do agendamento.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-inner">
+      <div class="cta-line"></div>
+      <h2 class="h2">Cuide da sua saúde bucal com uma clínica que valoriza planejamento, atenção e atendimento individualizado.</h2>
+      <a class="button-wa" href="https://wa.me/5511983508410?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20D%C3%ADade%20Odontologia." target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.3 16.9L2 22l5.2-1.4a8.9 8.9 0 0 0 4.3 1.1h0a8.9 8.9 0 0 0 6.1-15.4ZM11.5 20a7.4 7.4 0 0 1-3.8-1l-.3-.2-3.1.8.8-3-.2-.3a7.4 7.4 0 1 1 13.7-3.9A7.4 7.4 0 0 1 11.5 20Z"></path></svg>
+        Agendar atendimento
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/diade-logo.jpg" alt="Díade Odontologia">
+        <p class="footer-copy">Atendimento humanizado e planejamento individualizado.</p>
+      </div>
+      <div>
+        <div class="footer-title">Contato</div>
+        <div class="footer-meta">WhatsApp: +55 11 98350-8410</div>
+        <div class="footer-meta">Telefone: (11) 3831-7370</div>
+        <div class="footer-meta">Ana Elisa e Daniela</div>
+      </div>
+      <div>
+        <div class="footer-title">Endereço</div>
+        <div class="footer-address">Av. Dr. Gastão Vidigal, 1132, Conjunto 408 — Vila Leopoldina, São Paulo/SP — CEP 05314-000</div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Díade Odontologia. Todos os direitos reservados. Desenvolvido por SuperDental®</div>
+  </footer>
+
+  <script>
+    (function() {
+      var overlay = document.getElementById("popup-overlay");
+      var popup = document.getElementById("popup-notice");
+      var closeButton = document.getElementById("popup-close");
+      if (!overlay || !popup || !closeButton) return;
+
+      closeButton.addEventListener("click", function() {
+        overlay.classList.remove("show");
+      });
+
+      overlay.addEventListener("click", function(event) {
+        if (event.target === overlay) {
+          overlay.classList.remove("show");
+        }
+      });
+    })();
+
+    document.querySelectorAll(".faq-button").forEach(function(button) {
+      button.addEventListener("click", function() {
+        var item = button.parentElement;
+        var isOpen = item.classList.contains("open");
+        document.querySelectorAll(".faq-item").forEach(function(other) {
+          other.classList.remove("open");
+        });
+        if (!isOpen) {
+          item.classList.add("open");
+        }
+      });
+    });
+
+    (function() {
+      var carousel = document.querySelector(".test-carousel");
+      if (!carousel) return;
+
+      var track = carousel.querySelector(".test-track");
+      var originalItems = Array.from(track.children).map(function(item) {
+        return item.cloneNode(true);
+      });
+      var items = [];
+      var visibleCards = 3;
+      var currentIndex = 0;
+      var autoRotate;
+
+      function getVisibleCards() {
+        return window.innerWidth <= 900 ? 1 : 3;
+      }
+
+      function rebuildTrack() {
+        visibleCards = getVisibleCards();
+        track.innerHTML = "";
+
+        originalItems.forEach(function(item) {
+          track.appendChild(item.cloneNode(true));
+        });
+
+        items = Array.from(track.children);
+        items.slice(0, visibleCards).forEach(function(item) {
+          track.appendChild(item.cloneNode(true));
+        });
+
+        if (currentIndex >= originalItems.length) {
+          currentIndex = 0;
+        }
+      }
+
+      function getStepSize() {
+        var firstCard = track.querySelector(".test-item");
+        if (!firstCard) return 0;
+        var gap = parseFloat(window.getComputedStyle(track).gap || 24);
+        return firstCard.getBoundingClientRect().width + gap;
+      }
+
+      function updatePosition(animated) {
+        if (!animated) {
+          track.style.transition = "none";
+        } else {
+          track.style.transition = "transform 0.55s ease";
+        }
+        track.style.transform = "translateX(-" + (getStepSize() * currentIndex) + "px)";
+      }
+
+      function startAutoRotate() {
+        stopAutoRotate();
+        autoRotate = window.setInterval(function() {
+          currentIndex += 1;
+          updatePosition(true);
+        }, 3500);
+      }
+
+      function stopAutoRotate() {
+        if (autoRotate) {
+          window.clearInterval(autoRotate);
+        }
+      }
+
+      track.addEventListener("transitionend", function() {
+        if (currentIndex >= items.length) {
+          currentIndex = 0;
+          updatePosition(false);
+          track.offsetHeight;
+          track.style.transition = "transform 0.55s ease";
+        }
+      });
+
+      carousel.addEventListener("mouseenter", stopAutoRotate);
+      carousel.addEventListener("mouseleave", startAutoRotate);
+      window.addEventListener("resize", function() {
+        var nextVisibleCards = getVisibleCards();
+        if (nextVisibleCards !== visibleCards) {
+          rebuildTrack();
+        }
+        updatePosition(false);
+      });
+
+      rebuildTrack();
+      updatePosition(false);
+      startAutoRotate();
+    })();
+  </script>
+</body>
+</html>
