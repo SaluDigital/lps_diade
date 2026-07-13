@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KMS9728D');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Díade Odontologia | Implante Dentário para Voltar a Sorrir em São Paulo</title>
@@ -15,15 +22,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f8fbfb;
-      --bg-soft: #e5f6f7;
-      --bg-dark: #0e2b2e;
-      --text: #24403f;
-      --text-strong: #0e2b2e;
-      --text-muted: #4c6664;
-      --accent: #2dc5d2;
-      --accent-dark: #0e8c97;
-      --line: rgba(14, 43, 46, 0.15);
+      --bg: #FFFFFF;
+      --bg-soft: #cddae4;
+      --bg-dark: #171c36;
+      --text: #171c36;
+      --text-strong: #171c36;
+      --text-muted: rgba(23, 28, 54, 0.72);
+      --accent: #69c3d7;
+      --accent-dark: #69c3d7;
+      --line: rgba(23, 28, 54, 0.15);
       --line-dark: rgba(255, 255, 255, 0.14);
     }
 
@@ -46,7 +53,7 @@
       align-items: center;
       justify-content: center;
       padding: 24px;
-      background: rgba(7, 22, 24, 0.28);
+      background: rgba(23, 28, 54, 0.28);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
     }
@@ -58,10 +65,10 @@
     .popup-notice {
       width: min(360px, calc(100vw - 32px));
       background: var(--bg-dark);
-      color: #f4fbfa;
+      color: #FFFFFF;
       border-radius: 6px;
       padding: 22px 24px;
-      box-shadow: 0 22px 48px rgba(6, 24, 26, 0.4);
+      box-shadow: 0 22px 48px rgba(23, 28, 54, 0.4);
       border-top: 2px solid var(--accent);
       display: flex;
       gap: 14px;
@@ -72,7 +79,7 @@
       flex-shrink: 0;
       width: 30px;
       height: 30px;
-      border: 1px solid rgba(63, 201, 213, 0.5);
+      border: 1px solid rgba(105, 195, 215, 0.5);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -87,20 +94,20 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       margin-bottom: 10px;
-      color: #3fc9d5;
+      color: #69c3d7;
     }
 
     .popup-copy {
       font-size: 16px;
       line-height: 1.5;
-      color: #c9e4e4;
+      color: #cddae4;
       margin: 0;
     }
 
     .popup-close {
       background: none;
       border: 0;
-      color: #6e938f;
+      color: rgba(205, 218, 228, 0.72);
       cursor: pointer;
       font-size: 16px;
       line-height: 1;
@@ -154,7 +161,7 @@
 
     .eyebrow-light span:first-child { color: var(--accent-dark); }
     .eyebrow-light .eyebrow-line { background: var(--line); }
-    .eyebrow-dark span:first-child { color: #3fc9d5; }
+    .eyebrow-dark span:first-child { color: #69c3d7; }
     .eyebrow-dark .eyebrow-line { background: var(--line-dark); }
 
     .h1,
@@ -252,21 +259,21 @@
       width: 100%;
       height: 480px;
       object-fit: cover;
-      box-shadow: 0 30px 60px rgba(14, 43, 46, 0.18);
+      box-shadow: 0 30px 60px rgba(23, 28, 54, 0.18);
     }
 
     .button-wa {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: #25d366;
-      color: #fff;
+      background: #69c3d7;
+      color: #FFFFFF;
       font-family: "Manrope", sans-serif;
       font-weight: 700;
       font-size: 16px;
       padding: 16px 28px;
       border-radius: 4px;
-      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.28);
+      box-shadow: 0 14px 30px rgba(105, 195, 215, 0.28);
     }
 
     .about-grid {
@@ -286,10 +293,10 @@
 
     .dark-section {
       background: var(--bg-dark);
-      color: #fff;
+      color: #FFFFFF;
     }
 
-    .dark-section .h2 { color: #fff; }
+    .dark-section .h2 { color: #FFFFFF; }
 
     .diff-grid {
       display: grid;
@@ -308,7 +315,7 @@
       font-family: "Manrope", sans-serif;
       font-weight: 700;
       font-size: 16px;
-      color: #3fc9d5;
+      color: #69c3d7;
       flex-shrink: 0;
     }
 
@@ -316,13 +323,45 @@
       font-family: "Manrope", sans-serif;
       font-weight: 700;
       font-size: 19px;
-      color: #fff;
+      color: #FFFFFF;
       margin-bottom: 8px;
     }
 
     .diff-item-desc {
       font-size: 16px;
-      color: #9fbab7;
+      color: #cddae4;
+    }
+
+    .clinic-section {
+      background: #CDDAE4;
+    }
+
+    .clinic-gallery-head {
+      max-width: 680px;
+      margin-bottom: 44px;
+    }
+
+    .clinic-gallery-head .h2 {
+      margin-bottom: 18px;
+    }
+
+    .clinic-gallery-head p {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .clinic-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .clinic-gallery img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
     }
 
     .treat-grid {
@@ -416,15 +455,38 @@
 
     .team-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
       margin-bottom: 56px;
     }
 
-    .team-grid img {
+    .team-card {
+      min-width: 0;
+    }
+
+    .team-card img {
       width: 100%;
-      height: 420px;
+      height: 320px;
       object-fit: cover;
+      object-position: center top;
+      display: block;
+      margin-bottom: 22px;
+    }
+
+    .team-name {
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 1.25;
+      color: var(--text-strong);
+      margin-bottom: 10px;
+    }
+
+    .team-desc {
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--text-muted);
+      margin: 0;
     }
 
     .test-carousel {
@@ -443,9 +505,9 @@
       flex: 0 0 calc((100% - 48px) / 3);
       min-width: 0;
       border-top: 2px solid var(--accent);
-      background: linear-gradient(180deg, #f8fbfb 0%, #e5f6f7 100%);
+      background: linear-gradient(180deg, #FFFFFF 0%, #cddae4 100%);
       padding: 28px 24px;
-      box-shadow: 0 16px 36px rgba(14, 43, 46, 0.08);
+      box-shadow: 0 16px 36px rgba(23, 28, 54, 0.08);
     }
 
     .test-head {
@@ -459,8 +521,8 @@
       width: 46px;
       height: 46px;
       border-radius: 50%;
-      background: #0e8c97;
-      color: #fff;
+      background: #171c36;
+      color: #FFFFFF;
       font-family: "Manrope", sans-serif;
       font-weight: 800;
       font-size: 16px;
@@ -481,7 +543,7 @@
     .test-stars {
       display: flex;
       gap: 4px;
-      color: #ffb800;
+      color: #69c3d7;
       margin-bottom: 16px;
     }
 
@@ -500,7 +562,7 @@
 
     .loc-copy p {
       font-size: 17px;
-      color: #c7dedc;
+      color: #cddae4;
       margin: 0 0 6px;
     }
 
@@ -539,7 +601,7 @@
       align-items: center;
       gap: 8px;
       background: transparent;
-      color: #fff;
+      color: #FFFFFF;
       border: 1px solid rgba(255, 255, 255, 0.3);
       font-family: "Manrope", sans-serif;
       font-weight: 600;
@@ -559,7 +621,7 @@
     }
 
     .faq-item {
-      border-top: 1px solid rgba(14, 43, 46, 0.14);
+      border-top: 1px solid rgba(23, 28, 54, 0.14);
       padding: 26px 0;
     }
 
@@ -633,9 +695,9 @@
 
     .cta {
       padding: 110px 64px;
-      background-color: #0e2b2e;
+      background-color: #171c36;
       background-image:
-        linear-gradient(120deg, rgba(14, 43, 46, 0.84) 0%, rgba(18, 54, 56, 0.78) 55%, rgba(14, 43, 46, 0.88) 100%),
+        linear-gradient(120deg, rgba(23, 28, 54, 0.84) 0%, rgba(23, 28, 54, 0.78) 55%, rgba(23, 28, 54, 0.88) 100%),
         url("assets/call.webp");
       background-size: cover;
       background-position: center;
@@ -655,13 +717,13 @@
       width: 560px;
       height: 560px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(45, 197, 210, 0.16) 0%, rgba(45, 197, 210, 0) 70%);
+      background: radial-gradient(circle, rgba(105, 195, 215, 0.16) 0%, rgba(105, 195, 215, 0) 70%);
       pointer-events: none;
     }
 
     .cta-secondary {
       background-image:
-        linear-gradient(120deg, rgba(14, 43, 46, 0.84) 0%, rgba(18, 54, 56, 0.78) 55%, rgba(14, 43, 46, 0.88) 100%),
+        linear-gradient(120deg, rgba(23, 28, 54, 0.84) 0%, rgba(23, 28, 54, 0.78) 55%, rgba(23, 28, 54, 0.88) 100%),
         url("assets/call_implante.webp");
     }
 
@@ -679,13 +741,13 @@
     }
 
     .cta .h2 {
-      color: #fff;
+      color: #FFFFFF;
       margin-bottom: 32px;
     }
 
     .footer {
       padding: 60px 64px 40px;
-      background: #0a2224;
+      background: #171c36;
     }
 
     .footer-grid {
@@ -710,7 +772,7 @@
     }
 
     .footer-copy {
-      color: #6e938f;
+      color: rgba(205, 218, 228, 0.72);
       max-width: 320px;
       margin: 0;
     }
@@ -721,17 +783,17 @@
       font-size: 14px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #3fc9d5;
+      color: #69c3d7;
       margin-bottom: 16px;
     }
 
     .footer-meta {
-      color: #a9c6c3;
+      color: #cddae4;
       margin-bottom: 8px;
     }
 
     .footer-address {
-      color: #a9c6c3;
+      color: #cddae4;
       line-height: 1.6;
     }
 
@@ -741,7 +803,7 @@
       padding-top: 24px;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
       font-size: 14px;
-      color: #4e6b68;
+      color: rgba(205, 218, 228, 0.72);
     }
 
     @media (max-width: 900px) {
@@ -770,9 +832,16 @@
       .services-head,
       .loc-grid,
       .footer-grid,
-      .diff-grid,
-      .team-grid {
+      .diff-grid {
         grid-template-columns: 1fr;
+      }
+
+      .clinic-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .pillar-row {
@@ -879,19 +948,32 @@
       }
 
       .hero-frame img,
-      .team-grid img {
+      .clinic-gallery img,
+      .team-card img {
         height: 300px;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .clinic-gallery {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMS9728D"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div class="popup-overlay show" id="popup-overlay">
     <div class="popup-notice" id="popup-notice" role="dialog" aria-modal="true" aria-live="polite" aria-label="Aviso sobre atendimento">
       <div class="popup-icon" aria-hidden="true">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-          <path d="M12 2L3 6V11C3 16.5 6.8 21.4 12 22.8C17.2 21.4 21 16.5 21 11V6L12 2Z" stroke="#3FC9D5" stroke-width="1.8" stroke-linejoin="round"></path>
-          <path d="M9 12L11 14L15.5 9.5" stroke="#3FC9D5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M12 2L3 6V11C3 16.5 6.8 21.4 12 22.8C17.2 21.4 21 16.5 21 11V6L12 2Z" stroke="#69c3d7" stroke-width="1.8" stroke-linejoin="round"></path>
+          <path d="M9 12L11 14L15.5 9.5" stroke="#69c3d7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
       </div>
       <div style="flex: 1;">
@@ -910,7 +992,7 @@
         <h1 class="h1">Implante dentário para recuperar a confiança no seu sorriso</h1>
         <p>Reponha dentes perdidos com um tratamento planejado para devolver conforto ao mastigar, naturalidade ao sorrir e mais tranquilidade para viver sua rotina sem esconder o sorriso.</p>
         <div class="hero-meta">Vila Leopoldina · São Paulo/SP</div>
-        <a class="button-wa" href="https://wa.me/5511983508410?text=Ol%C3%A1%21%20Vim%20do%20Google%20e%20gostaria%20de%20saber%20mais%20sobre%20Implante%20dent%C3%A1rio" target="_blank" rel="noopener">
+        <a class="button-wa sellbot-wpp-open" href="https://wa.me/5511983508410?text=Ol%C3%A1%21%20Vim%20do%20Google%20e%20gostaria%20de%20saber%20mais%20sobre%20Implante%20dent%C3%A1rio" target="_blank" rel="noopener">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.3 16.9L2 22l5.2-1.4a8.9 8.9 0 0 0 4.3 1.1h0a8.9 8.9 0 0 0 6.1-15.4ZM11.5 20a7.4 7.4 0 0 1-3.8-1l-.3-.2-3.1.8.8-3-.2-.3a7.4 7.4 0 1 1 13.7-3.9A7.4 7.4 0 0 1 11.5 20Zm4-5.5c-.2-.1-1.3-.6-1.5-.7-.2-.1-.4-.1-.5.1-.1.2-.6.7-.7.9-.1.1-.3.1-.5 0-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.1 0-.3 0-.4 0-.1-.5-1.2-.7-1.6-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.1 1.6 2.5 4 3.5.5.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1Z"></path></svg>
           Agendar atendimento
         </a>
@@ -924,7 +1006,7 @@
   <section class="section-pad">
     <div class="container about-grid">
       <div class="eyebrow eyebrow-light" style="margin-bottom: 0;">
-        <span>01 — Seu sorriso de volta</span>
+        <span>Seu sorriso de volta</span>
         <span class="eyebrow-line"></span>
       </div>
       <div class="about-copy">
@@ -937,7 +1019,7 @@
   <section class="section-pad dark-section">
     <div class="container">
       <div class="eyebrow eyebrow-dark" style="margin-bottom: 60px;">
-        <span>02 — Diferenciais</span>
+        <span>Diferenciais</span>
         <span class="eyebrow-line"></span>
       </div>
       <h2 class="h2" style="margin-bottom: 56px; max-width: 620px;">O cuidado que transforma a decisão de fazer implante em algo mais leve</h2>
@@ -986,7 +1068,7 @@
         </div>
       </div>
       <div style="margin-top: 40px; text-align: center;">
-        <a class="button-wa" href="https://wa.me/5511983508410?text=Ol%C3%A1%21%20Vim%20do%20Google%20e%20gostaria%20de%20saber%20mais%20sobre%20Implante%20dent%C3%A1rio" target="_blank" rel="noopener">
+        <a class="button-wa sellbot-wpp-open" href="https://wa.me/5511983508410?text=Ol%C3%A1%21%20Vim%20do%20Google%20e%20gostaria%20de%20saber%20mais%20sobre%20Implante%20dent%C3%A1rio" target="_blank" rel="noopener">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.3 16.9L2 22l5.2-1.4a8.9 8.9 0 0 0 4.3 1.1h0a8.9 8.9 0 0 0 6.1-15.4ZM11.5 20a7.4 7.4 0 0 1-3.8-1l-.3-.2-3.1.8.8-3-.2-.3a7.4 7.4 0 1 1 13.7-3.9A7.4 7.4 0 0 1 11.5 20Z"></path></svg>
           Agendar atendimento
         </a>
@@ -994,10 +1076,30 @@
     </div>
   </section>
 
+  <section class="section-pad clinic-section">
+    <div class="container">
+      <div class="eyebrow eyebrow-light">
+        <span>Estrutura da clínica</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <div class="clinic-gallery-head">
+        <h2 class="h2">Ambientes preparados para receber você com conforto e segurança</h2>
+        <p>Conheça alguns espaços da Díade Odontologia pensados para uma experiência acolhedora, organizada e tranquila em cada etapa do atendimento.</p>
+      </div>
+      <div class="clinic-gallery">
+        <img src="assets/Consultório1.jpg" alt="Consultório da Díade Odontologia">
+        <img src="assets/Consultório2.jpg" alt="Consultório preparado para atendimento odontológico">
+        <img src="assets/Consultório2_2.jpg" alt="Detalhe do consultório da Díade Odontologia">
+        <img src="assets/Recepção.jpg" alt="Recepção da Díade Odontologia">
+        <img src="assets/Recepção2.jpg" alt="Área de recepção da clínica">
+        <img src="assets/SaladeEsterilização_2.jpg" alt="Sala de esterilização da Díade Odontologia">
+      </div>
+    </div>
+  </section>
   <section class="section-pad">
     <div class="container">
       <div class="eyebrow eyebrow-light">
-        <span>03 — Conforto e estética</span>
+        <span>Conforto e estética</span>
         <span class="eyebrow-line"></span>
       </div>
       <div class="treat-grid">
@@ -1006,11 +1108,11 @@
           <p>O implante dentário é planejado de acordo com sua necessidade clínica, o número de dentes a repor, sua estrutura óssea e o resultado que você deseja ver no espelho.</p>
         </div>
         <div class="treat-list">
-          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Reposição de dentes perdidos com planejamento individualizado</span></div>
-          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Avaliação da estrutura óssea e das condições para o implante</span></div>
-          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Reabilitação pensada para mastigação, fala e harmonia do sorriso</span></div>
-          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Acompanhamento contínuo durante as etapas do tratamento</span></div>
-          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#2DC5D2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Tratamento pensado para unir resultado funcional, estética e autoestima</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#69c3d7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Reposição de dentes perdidos com planejamento individualizado</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#69c3d7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Avaliação da estrutura óssea e das condições para o implante</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#69c3d7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Reabilitação pensada para mastigação, fala e harmonia do sorriso</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#69c3d7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Acompanhamento contínuo durante as etapas do tratamento</span></div>
+          <div class="treat-item"><span class="treat-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.2 6.2 4.8 8.8 9.8 3.5" stroke="#69c3d7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span>Tratamento pensado para unir resultado funcional, estética e autoestima</span></div>
         </div>
       </div>
     </div>
@@ -1020,7 +1122,7 @@
     <div class="cta-inner">
       <div class="cta-line"></div>
       <h2 class="h2">Imagine voltar a comer e sorrir com mais tranquilidade. O primeiro passo é uma avaliação.</h2>
-      <a class="button-wa" href="https://wa.me/5511983508410?text=Ol%C3%A1%21%20Vim%20do%20Google%20e%20gostaria%20de%20saber%20mais%20sobre%20Implante%20dent%C3%A1rio" target="_blank" rel="noopener">
+      <a class="button-wa sellbot-wpp-open" href="https://wa.me/5511983508410?text=Ol%C3%A1%21%20Vim%20do%20Google%20e%20gostaria%20de%20saber%20mais%20sobre%20Implante%20dent%C3%A1rio" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.3 16.9L2 22l5.2-1.4a8.9 8.9 0 0 0 4.3 1.1h0a8.9 8.9 0 0 0 6.1-15.4ZM11.5 20a7.4 7.4 0 0 1-3.8-1l-.3-.2-3.1.8.8-3-.2-.3a7.4 7.4 0 1 1 13.7-3.9A7.4 7.4 0 0 1 11.5 20Z"></path></svg>
         Agendar atendimento
       </a>
@@ -1030,7 +1132,7 @@
   <section class="section-pad services-section">
     <div class="container">
       <div class="eyebrow eyebrow-light">
-        <span>04 — Como funciona</span>
+        <span>Como funciona</span>
         <span class="eyebrow-line"></span>
       </div>
       <div class="services-head">
@@ -1065,13 +1167,31 @@
   <section class="section-pad">
     <div class="container">
       <div class="eyebrow eyebrow-light">
-        <span>05 — Confiança</span>
+        <span>Confiança</span>
         <span class="eyebrow-line"></span>
       </div>
-      <h2 class="h2" style="margin-bottom: 56px; max-width: 620px;">Um espaço para você se sentir acolhido enquanto recupera seu sorriso</h2>
+      <h2 class="h2" style="margin-bottom: 56px; max-width: 620px;">Uma equipe dedicada ao seu cuidado</h2>
       <div class="team-grid">
-        <img src="assets/clinica1.webp" alt="Ambiente da clínica Díade Odontologia">
-        <img src="assets/clinica2.webp" alt="Estrutura da clínica Díade Odontologia">
+        <article class="team-card">
+          <img src="assets/Dra. CeciliaDiaferia.jpg" alt="Dra. Cecilia Diaféria">
+          <h3 class="team-name">Dra. Cecilia Diaféria</h3>
+          <p class="team-desc">Com mais de 30 anos de experiência, a Dra. Cecília é especialista em Odontopediatria e Dentística.</p>
+        </article>
+        <article class="team-card">
+          <img src="assets/Dra.DanielaHilario.jpg" alt="Dra. Daniela Hilário">
+          <h3 class="team-name">Dra. Daniela Hilário</h3>
+          <p class="team-desc">Nossa especialista em Endodontia e Odontologia Estética, a Dra. Daniela Hilário tem vasta experiência em transformar sorrisos e é a responsável pelo time de profissionais da clínica.</p>
+        </article>
+        <article class="team-card">
+          <img src="assets/Dra.AngelaRuggiero.jpg" alt="Dra. Angela Ruggiero">
+          <h3 class="team-name">Dra. Angela Ruggiero</h3>
+          <p class="team-desc">Com anos de sólida experiência e inúmeros cursos de aperfeiçoamento, a Dra. Angela possui amplo conhecimento na área de Ortodontia, Cirurgia Oral e Ortopedia.</p>
+        </article>
+        <article class="team-card">
+          <img src="assets/Dra.JussaraPugliese.jpg" alt="Dra. Jussara Pugliese">
+          <h3 class="team-name">Dra. Jussara Pugliese</h3>
+          <p class="team-desc">Top Doctor Diamond Invisalign e credenciada no sistema de Aparelho Autoligado Damon, a Dra. Jussara atua na área de Ortodontia e Ortopedia funcional dos maxilares.</p>
+        </article>
       </div>
       <div class="test-carousel" aria-label="Depoimentos de pacientes">
         <div class="test-track">
@@ -1143,18 +1263,18 @@
   <section class="section-pad dark-section">
     <div class="container">
       <div class="eyebrow eyebrow-dark" style="margin-bottom: 56px;">
-        <span>06 — Agende sua avaliação</span>
+        <span>Agende sua avaliação</span>
         <span class="eyebrow-line"></span>
       </div>
       <div class="loc-grid">
         <div class="loc-copy">
-          <h2 class="h2" style="font-size: 32px; color: #fff; margin-bottom: 22px;">Díade Odontologia</h2>
+          <h2 class="h2" style="font-size: 32px; color: #FFFFFF; margin-bottom: 22px;">Díade Odontologia</h2>
           <p>Av. Dr. Gastão Vidigal, 1132, Conjunto 408</p>
           <p>Vila Leopoldina, São Paulo/SP</p>
           <p style="margin-bottom: 22px;">CEP 05314-000</p>
           <p style="margin-bottom: 32px;">Se você quer voltar a sorrir sem receio, mastigar com mais conforto e se sentir bem com sua imagem, agende sua avaliação e descubra qual caminho faz sentido para o seu caso.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 14px;">
-            <a class="button-wa" href="https://wa.me/5511983508410?text=Ol%C3%A1%21%20Vim%20do%20Google%20e%20gostaria%20de%20saber%20mais%20sobre%20Implante%20dent%C3%A1rio" target="_blank" rel="noopener">
+            <a class="button-wa sellbot-wpp-open" href="https://wa.me/5511983508410?text=Ol%C3%A1%21%20Vim%20do%20Google%20e%20gostaria%20de%20saber%20mais%20sobre%20Implante%20dent%C3%A1rio" target="_blank" rel="noopener">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.3 16.9L2 22l5.2-1.4a8.9 8.9 0 0 0 4.3 1.1h0a8.9 8.9 0 0 0 6.1-15.4ZM11.5 20a7.4 7.4 0 0 1-3.8-1l-.3-.2-3.1.8.8-3-.2-.3a7.4 7.4 0 1 1 13.7-3.9A7.4 7.4 0 0 1 11.5 20Z"></path></svg>
               Falar com a clínica
             </a>
@@ -1173,7 +1293,7 @@
   <section class="section-pad">
     <div class="faq-wrap">
       <div class="eyebrow eyebrow-light">
-        <span>07 — Dúvidas frequentes</span>
+        <span>Dúvidas frequentes</span>
         <span class="eyebrow-line"></span>
       </div>
       <h2 class="h2" style="font-size: 32px; margin-bottom: 44px;">Dúvidas comuns antes de decidir pelo implante dentário</h2>
@@ -1235,7 +1355,7 @@
     <div class="cta-inner">
       <div class="cta-line"></div>
       <h2 class="h2">O sorriso que você sente falta pode estar mais perto do que imagina.</h2>
-      <a class="button-wa" href="https://wa.me/5511983508410?text=Ol%C3%A1%21%20Vim%20do%20Google%20e%20gostaria%20de%20saber%20mais%20sobre%20Implante%20dent%C3%A1rio" target="_blank" rel="noopener">
+      <a class="button-wa sellbot-wpp-open" href="https://wa.me/5511983508410?text=Ol%C3%A1%21%20Vim%20do%20Google%20e%20gostaria%20de%20saber%20mais%20sobre%20Implante%20dent%C3%A1rio" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 3.3 16.9L2 22l5.2-1.4a8.9 8.9 0 0 0 4.3 1.1h0a8.9 8.9 0 0 0 6.1-15.4ZM11.5 20a7.4 7.4 0 0 1-3.8-1l-.3-.2-3.1.8.8-3-.2-.3a7.4 7.4 0 1 1 13.7-3.9A7.4 7.4 0 0 1 11.5 20Z"></path></svg>
         Agendar atendimento
       </a>
@@ -1382,5 +1502,6 @@
       startAutoRotate();
     })();
   </script>
+  <script src="https://plugin.sellbot.tech/assets/js/sellbot_plugin.min.js"></script>
 </body>
 </html>
