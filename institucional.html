@@ -193,6 +193,18 @@
       box-shadow: 0 30px 60px rgba(23, 28, 54, 0.18);
     }
 
+    .hero-frame.hero-frame-vertical {
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-frame.hero-frame-vertical img {
+      aspect-ratio: 4 / 5;
+      height: auto;
+      object-position: center;
+    }
+
     .button-wa,
     .button-call {
       display: inline-flex;
@@ -273,8 +285,72 @@
       color: #cddae4;
     }
 
+    .before-after-section {
+      background: #FFFFFF;
+    }
+
+    .before-after-head {
+      max-width: 680px;
+      margin-bottom: 44px;
+    }
+
+    .before-after-head .h2 {
+      margin-bottom: 18px;
+    }
+
+    .before-after-head p {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .before-after-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .before-after-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: #FFFFFF;
+    }
+
+    .before-after-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .before-after-image {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .before-after-image img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .before-after-label {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      padding: 7px 10px;
+      border-radius: 4px;
+      background: rgba(23, 28, 54, 0.78);
+      color: #FFFFFF;
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     .clinic-section {
-      background: #CDDAE4;
+      background: #DEE8EE;
     }
 
     .clinic-gallery-head {
@@ -302,6 +378,39 @@
       width: 100%;
       height: 320px;
       object-fit: cover;
+      display: block;
+    }
+
+    .odontopediatria-section {
+      background: #CDDAE4;
+    }
+
+    .odontopediatria-head {
+      max-width: 720px;
+      margin-bottom: 44px;
+    }
+
+    .odontopediatria-head .h2 {
+      margin-bottom: 18px;
+    }
+
+    .odontopediatria-head p {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .odontopediatria-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .odontopediatria-gallery img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      object-position: center;
       display: block;
     }
 
@@ -403,6 +512,15 @@
 
     .team-card {
       min-width: 0;
+      height: 100%;
+      padding: 18px;
+      border: 1px solid transparent;
+    }
+
+    .team-card-featured {
+      border: 1px solid var(--bg-dark);
+      background: var(--bg-dark);
+      box-shadow: 0 22px 44px rgba(23, 28, 54, 0.12);
     }
 
     .team-card img {
@@ -428,6 +546,14 @@
       line-height: 1.55;
       color: var(--text-muted);
       margin: 0;
+    }
+
+    .team-card-featured .team-name {
+      color: #FFFFFF;
+    }
+
+    .team-card-featured .team-desc {
+      color: rgba(255, 255, 255, 0.82);
     }
 
     .test-carousel {
@@ -771,11 +897,16 @@
       .services-head,
       .loc-grid,
       .footer-grid,
+      .before-after-grid,
       .diff-grid {
         grid-template-columns: 1fr;
       }
 
       .clinic-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .odontopediatria-gallery {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -817,6 +948,14 @@
 
       .hero-frame img {
         height: 380px;
+      }
+
+      .hero-frame.hero-frame-vertical {
+        max-width: 420px;
+      }
+
+      .hero-frame.hero-frame-vertical img {
+        height: auto;
       }
 
       .cta {
@@ -888,8 +1027,14 @@
 
       .hero-frame img,
       .clinic-gallery img,
+      .odontopediatria-gallery img,
+      .before-after-image img,
       .team-card img {
         height: 300px;
+      }
+
+      .hero-frame.hero-frame-vertical img {
+        height: auto;
       }
 
       .team-grid {
@@ -897,6 +1042,10 @@
       }
 
       .clinic-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .odontopediatria-gallery {
         grid-template-columns: 1fr;
       }
     }
@@ -924,8 +1073,8 @@
           (11) 97396-1959
         </a>
       </div>
-      <div class="hero-frame">
-        <img src="assets/hero.webp" alt="Clínica Díade Odontologia">
+      <div class="hero-frame hero-frame-vertical">
+        <img src="assets/hero-institucional.webp" alt="Clínica Díade Odontologia">
       </div>
     </div>
   </section>
@@ -1007,6 +1156,57 @@
     </div>
   </section>
 
+  <section class="section-pad before-after-section">
+    <div class="container">
+      <div class="eyebrow eyebrow-light">
+        <span>Antes e depois</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <div class="before-after-head">
+        <h2 class="h2">Transformações que revelam a naturalidade do sorriso</h2>
+        <p>Confira alguns resultados de tratamentos realizados com planejamento individualizado, cuidado nos detalhes e foco em harmonia estética.</p>
+      </div>
+      <div class="before-after-grid">
+        <article class="before-after-card">
+          <div class="before-after-pair">
+            <div class="before-after-image">
+              <img src="assets/a1.jpeg" alt="Antes do tratamento odontológico - caso 1">
+              <span class="before-after-label">Antes</span>
+            </div>
+            <div class="before-after-image">
+              <img src="assets/a2.jpeg" alt="Depois do tratamento odontológico - caso 1">
+              <span class="before-after-label">Depois</span>
+            </div>
+          </div>
+        </article>
+        <article class="before-after-card">
+          <div class="before-after-pair">
+            <div class="before-after-image">
+              <img src="assets/b1.jpeg" alt="Antes do tratamento odontológico - caso 2">
+              <span class="before-after-label">Antes</span>
+            </div>
+            <div class="before-after-image">
+              <img src="assets/b2.jpeg" alt="Depois do tratamento odontológico - caso 2">
+              <span class="before-after-label">Depois</span>
+            </div>
+          </div>
+        </article>
+        <article class="before-after-card">
+          <div class="before-after-pair">
+            <div class="before-after-image">
+              <img src="assets/c1.jpeg" alt="Antes do tratamento odontológico - caso 3">
+              <span class="before-after-label">Antes</span>
+            </div>
+            <div class="before-after-image">
+              <img src="assets/c2.jpeg" alt="Depois do tratamento odontológico - caso 3">
+              <span class="before-after-label">Depois</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="section-pad clinic-section">
     <div class="container">
       <div class="eyebrow eyebrow-light">
@@ -1027,6 +1227,25 @@
       </div>
     </div>
   </section>
+
+  <section class="section-pad odontopediatria-section">
+    <div class="container">
+      <div class="eyebrow eyebrow-light">
+        <span>Odontopediatria</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <div class="odontopediatria-head">
+        <h2 class="h2">Cuidado infantil conduzido com acolhimento e leveza</h2>
+        <p>As consultas de odontopediatria s&atilde;o pensadas para receber crian&ccedil;as com calma, escuta e uma abordagem que ajuda a construir confian&ccedil;a desde os primeiros cuidados com o sorriso.</p>
+      </div>
+      <div class="odontopediatria-gallery">
+        <img src="assets/op1.jpeg" alt="Doutora atendendo crian&ccedil;a na odontopediatria">
+        <img src="assets/op2.jpeg" alt="Atendimento odontopedi&aacute;trico na D&iacute;ade Odontologia">
+        <img src="assets/op3.jpeg" alt="Consulta infantil de odontopediatria">
+      </div>
+    </div>
+  </section>
+
   <section class="section-pad">
     <div class="container">
       <div class="eyebrow eyebrow-light">
@@ -1110,15 +1329,15 @@
       </div>
       <h2 class="h2" style="margin-bottom: 56px; max-width: 620px;">Uma equipe dedicada ao seu cuidado</h2>
       <div class="team-grid">
+        <article class="team-card team-card-featured">
+          <img src="assets/Dra.DanielaHilario.jpg" alt="Dra. Daniela Hilário">
+          <h3 class="team-name">Dra. Daniela Hilário</h3>
+          <p class="team-desc">Nossa especialista em Endodontia e Odontologia Estética, a Dra. Daniela Hilário tem vasta experiência em transformar sorrisos e é a responsável pelo time de profissionais da clínica.</p>
+        </article>
         <article class="team-card">
           <img src="assets/Dra. CeciliaDiaferia.jpg" alt="Dra. Cecilia Diaféria">
           <h3 class="team-name">Dra. Cecilia Diaféria</h3>
           <p class="team-desc">Com mais de 30 anos de experiência, a Dra. Cecília é especialista em Odontopediatria e Dentística.</p>
-        </article>
-        <article class="team-card">
-          <img src="assets/Dra.DanielaHilario.jpg" alt="Dra. Daniela Hilário">
-          <h3 class="team-name">Dra. Daniela Hilário</h3>
-          <p class="team-desc">Nossa especialista em Endodontia e Odontologia Estética, a Dra. Daniela Hilário tem vasta experiência em transformar sorrisos e é a responsável pelo time de profissionais da clínica.</p>
         </article>
         <article class="team-card">
           <img src="assets/Dra.AngelaRuggiero.jpg" alt="Dra. Angela Ruggiero">
@@ -1306,7 +1525,6 @@
         <div class="footer-title">Contato</div>
         <div class="footer-meta">WhatsApp: +55 11 97396-1959</div>
         <div class="footer-meta">Telefone: (11) 3831-7370</div>
-        <div class="footer-meta">Ana Elisa e Daniela</div>
       </div>
       <div>
         <div class="footer-title">Endereço</div>
